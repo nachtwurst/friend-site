@@ -142,12 +142,12 @@ body {
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
-        overflow-y: scroll;
+        overflow-y: hidden;
     }
     
     .crt {
-        overflow: hidden; 
-        position: relative; 
+        overflow: scroll; 
+        position: relative;
     }
     
     .crt::before {
