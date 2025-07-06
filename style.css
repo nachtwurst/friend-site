@@ -136,8 +136,6 @@ body {
     #content-box {
         width: 90%;
         height: 90%;
-        aspect-ratio: unset; /* Remove fixed aspect ratio */
-        min-height: auto; /* Allow natural height */
         padding: 1rem;
         margin: 0;
         display: flex;
@@ -147,7 +145,7 @@ body {
     }
     
     .crt {
-        overflow: visible; 
+        overflow: hidden; 
         position: relative; 
     }
     
