@@ -9,8 +9,6 @@ body {
     padding: 0;
     margin: 0;
 }
-
-
 #content-box {
     width: 42%;
     height: auto;
@@ -25,7 +23,6 @@ body {
     align-items: center;
     /* background-color: rgb(175, 154, 154); */
 }
-
 .list-item {
     /* background-color: aquamarine;
     border-radius: 3px; */
@@ -37,16 +34,13 @@ body {
     justify-content: center;
     align-items: center; */
 }
-
 /* .link-style {
     text-decoration: none;
     color: hotpink;
 }
-
 .link-style:visited {
     color: hotpink;
 } */
-
 .crt {
     background: rgb(21, 30, 37);
     border-radius: 20px;
@@ -57,7 +51,6 @@ body {
     overflow: hidden;
     isolation: isolate; /* Prevents blend mode interference */
 }
-
 .crt::before {
     content: "";
     position: absolute;
@@ -74,7 +67,6 @@ body {
     z-index: 1;
     mix-blend-mode: overlay;
 }
-
 .crt::after {
     content: "";
     position: absolute;
@@ -92,7 +84,6 @@ body {
     z-index: 2;
     mix-blend-mode: multiply;
 }
-
 @keyframes scanlines {
     0% {
         transform: translateY(0);
@@ -101,7 +92,6 @@ body {
         transform: translateY(4px);
     }
 }
-
 .button-link {
     display: flex;
     justify-content: center;
@@ -122,13 +112,11 @@ body {
     transition: all 0.05s ease-in-out;
     user-select: none;  /* Prevents text selection during drag */
 }
-
 .button-link:hover {
     background: linear-gradient(to bottom, #525252, #383838);
     color: #fff;
 }
-
-/* Create a class for the pressed state */
+/* Class for the pressed state */
 .button-link.pressed {
     top: 2px;
     background: linear-gradient(to bottom, #282828, #202020);
@@ -137,27 +125,37 @@ body {
         0 1px 2px rgba(0,0,0,0.2);
     color: #d0d0d0;
 }
-
 @media only screen and (max-width: 800px) {
+    body {
+        overflow-y: auto; /* Enable vertical scrolling on mobile */
+        align-items: flex-start; /* Align content to top instead of center */
+        padding: 1rem 0; /* Add some padding for spacing */
+    }
+    
     #content-box {
         width: 90%;
         height: auto;
-        aspect-ratio: 4 / 3;
-        padding: 0;
+        aspect-ratio: unset;
+        min-height: auto;
+        padding: 1rem;
         margin: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
     }
-
+    
+    .crt {
+        overflow-y: auto; /* Enable scrolling within the CRT container */
+        max-height: 90vh; /* Limit height to viewport */
+    }
+    
     .list-item {
         width: 82%;
         padding: 0.5em;
-        margin: 0 auto;
+        margin: 0.5em auto;
         box-sizing: border-box;
     }
-
     .button-link {
         width: 100%;
         padding: 0.8em;
@@ -166,4 +164,3 @@ body {
         box-sizing: border-box;
     }
 }
-
