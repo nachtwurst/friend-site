@@ -135,13 +135,13 @@ body {
     
     #content-box {
         width: 90%;
-        height: auto;
+        height: 90%;
         aspect-ratio: unset; /* Remove fixed aspect ratio */
         min-height: auto; /* Allow natural height */
         padding: 1rem;
         margin: 0;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         box-sizing: border-box;
     }
